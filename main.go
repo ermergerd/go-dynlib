@@ -222,9 +222,8 @@ func main() {
 	err := compilestd()
 	if err != nil {
 		log.Fatalln("Failed to compile the golang standard library libstd.so:", err)
-	} else {
-		log.Println("Successfully build libstd.so")
 	}
+	log.Println("Successfully built libstd.so")
 	time.Sleep(2 * time.Second)
 
 	// Walk through the packages in dependency order and attemp to build
